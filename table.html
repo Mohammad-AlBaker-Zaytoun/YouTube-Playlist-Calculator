@@ -1,0 +1,153 @@
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeTable Generator</title>
+    <meta name="description" content="Time Table Generator is a tool which helps you to make a time table for a youtube playlist by playlist URL ">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="icon" href="img/favicon.png">
+    <link rel="stylesheet" href="css/header%26share.css">
+    <link rel="stylesheet" href="css/timetable.css">
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="../cdn.jsdelivr.net/npm/bootstrap%405.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> 
+    <style>
+        table{
+            width: 100%!Important;
+            border-collapse:collapse!Important ;
+        }
+        td, th{
+            border: 2px solid #cccccc!Important;
+            padding: 10px 20px!Important;
+            width: 1!Important;
+            text-align: center!Important;
+        }
+        th{
+            font-family: Arial, Helvetica, sans-serif!Important;
+        }
+        body{
+            background-color: bisque;
+            padding-left:10px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header class=".bg-dark" style="background-color: black; ">
+        <div class="heading container .bg-dark">
+            <div class="logo">
+                <h1>Time Table Generator</h1>
+            </div>
+            <div class="linking">
+                <ul>
+                    <li class="nav-linker"><a class="hyperlinks" href="index-2.html">YouTube Playlist Length</a></li>
+                    <li class="nav-linker"><a class="hyperlinks" href="https://mohammadzaytoun-portfolio.netlify.app/" target="_blank">About Me</a></li>
+                </ul>
+            </div>
+            <div class="menu-lines">
+                <i id="menu" style=" font-size: 25px;"class="fa fa-bars" ></i>
+            </div>
+        </div>
+    </header>
+    
+    <section class="container marg">
+        <div class="getUrl d-flex flex-column">
+            <label>Get the Timetable for any YouTube playlist :</label>
+            <div class="inputbtn d-flex marg2">
+                <input type="text" id="form1" placeholder="youtube.com/playlist?list=ID">
+                <button id="getbtn">Get Table</button>
+            </div>
+        </div>
+        <div class="videoNumbers d-flex flex-column my-3">
+            <div class="text">
+                <p>Enter Video starting and ending Number in Input tags given below <span style="color: blueviolet;">( For full Playlist Leave tags empty)</span>  :  </p>
+            </div>
+            <div class="inputvals d-flex ">
+                <input type="number" min="0" id="edit1" class="from" placeholder="From">
+                <input type="number" min="0" id="edit2" class="from" placeholder="To">
+            </div>
+        <div class="videoNumbers d-flex flex-column my-3">
+            <div class="text">
+                <p>Enter how much time you want to  per day (in hours) <span style="color: blueviolet;">(If left empty 1 hour/day will be set as the default)</span>  :  </p>
+            </div>
+            <div class="inputvals d-flex ">
+                <input type="number" min="0" id="gethours" class="from1" placeholder="hours/day">
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section class="output container">
+        <h2 class="text-center" style="font-size: 35px;" >Time Table</h2>
+        <div id="result">
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            DAY
+                        </th>
+                        <th>
+                            From Video No.
+                        </th>
+                        <th>
+                            To Video No.
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="data"></tbody>
+            </table>
+        </div>
+    </div>
+    <hr style="opacity : 0.2;">
+    </section>
+    <section class="error">
+        <div class="container text-center" style="color:red" id="wrngOutput">
+
+        </div>
+        <hr>
+    </section>
+     <section class="makeNotes">
+        <div class="cont1" style="z-index: 2;">
+            <h3>Add Note</h3>
+            <p>Give a Title to this Note</p>
+            <input style="width: 100%; padding: 0 5px;" id="headNote" type="text">
+            <div class="buttons">
+                <button id="cancel">Cancel</button>
+                <button id="Add">Add</button>
+            </div>
+        </div>
+     </section>
+     <section class="contact">
+        <div class="contact-btn">
+            <a href="https://www.linkedin.com/in/aman-kumar-Aman2104/">
+                <i class="fa fa-linkedin"></i>
+            </a>
+            <a href="https://twitter.com/Amanyara21">
+                <i class="fa fa-twitter"></i>
+            </a>
+            <a href="https://github.com/Aman2104">
+                <i class="fa fa-github"></i>
+            </a>
+            <a href="mailto:amanyara88@gmail.com">
+                <i class="fa fa-envelope"></i>
+            </a>
+            <div>
+                <i class="fa fa-share-alt"></i>
+            </div>
+        </div>
+     </section>
+     <section class="about container">
+        <div class="text">
+            <h2 class="text-center">Time Table Generator</h2>
+            <p class="text-center">Time Table Generator is a tool used to get the timetable for a youtube playlist. For getting the timetable for a playlist, paste the link of the playlist in the Input tag and write the number of videos in from and to input tag and then write the number of hours in the last input tag.
+            </p>
+        </div>
+    </section>
+    <hr style="opacity: 0.2;">
+    <script src="javascript/index.js"></script>
+    <script src="javascript/async.js"></script>
+    <script src="javascript/share.js"></script>
+    <script src="../cdn.jsdelivr.net/npm/bootstrap%405.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+</html>

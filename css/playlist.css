@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&amp;display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, Tahoma, "Courier New";
+}
+
+@media (min-width: 1600px) {
+  p {
+    font-size: larger;
+  }
+}
+
+/* .cont1{
+    align-items: center;
+} */
+input {
+  border: 1.9px solid black;
+  padding: 0 10px;
+  border-right: none;
+  height: 35px;
+}
+#cal {
+  height: 35px;
+  width: 90px;
+  font: 1em sans-serif;
+  position: relative;
+  z-index: 2;
+  background-color: blue;
+  color: aliceblue;
+  border-left: none;
+}
+#form1 {
+  /* width: 1176px; */
+  width: 100%;
+}
+
+.edit {
+  padding: 1px 18px;
+  border: 1.8px solid black;
+
+  border-radius: 8px;
+  height: 28px;
+  width: 100px;
+  /* margin: 10px; */
+}
+
+.text {
+  margin: 10px 1px;
+  font-size: 15px;
+}
